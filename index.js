@@ -1,10 +1,11 @@
-const express = require('express') // create require
+const express = require('express'); // create require
+const userRouter = require('./routes/airport.routes');
 
-const PORT = process.env.PORT || 8080 // port from system envs or default
-const app = express() // create server
+const PORT = process.env.PORT || 8080; // port from system envs or default
 
-app.get('/', (req , res) => {
-    res.send('HI, POSTGRES + NODE')
-})
+const app = express(); // create server
 
-app.listen(PORT, () => console.log(`server started on port ${PORT}`))
+app.use(express.json());
+app.use('/api', userRouter);
+
+app.listen(PORT, () => console.log(`server started on port ${PORT}`));

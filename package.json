@@ -2,17 +2,17 @@
   "name": "airport",
   "version": "1.0.0",
   "description": "Repo for universities subject named the databases",
-  "main": "connect.js",
+  "main": "index.js",
   "scripts": {
     "start": "node index.js",
-    "stop": "pkill --signal SIGINT index.js"
+    "dev": "nodemon"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
     "express": "^4.17.1",
-    "pg": "^8.5.1"
+    "pg": "^8.6.0"
   },
   "devDependencies": {
     "nodemon": "^2.0.7"
